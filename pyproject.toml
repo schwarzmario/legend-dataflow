@@ -52,15 +52,18 @@ dynamic = ["version"]
 dependencies = [
     "colorlog",
     "dbetto==1.2.4",
-    "pygama==2.3.2",
-    "dspeed==2.1.2",
+    "pygama @  file:///${PROJECT_ROOT}/../../sw/pygama",
+    "dspeed @  file:///${PROJECT_ROOT}/../../sw/dspeed",
     "pylegendmeta==1.3.1",
     "legend-pydataobj==1.17.2",
     "legend-daq2lh5==1.6.3",
-    "legend-dataflow-scripts==0.3.0a2",
+    "legend-dataflow-scripts @  file:///${PROJECT_ROOT}/../../sw/legend-dataflow-scripts",
     "pip",
 ]
 
+#"pygama==2.3.2",
+#"dspeed==2.1.2",
+#"legend-dataflow-scripts==0.2.4",
 #"legend-dataflow-scripts @  file:///${PROJECT_ROOT}/../legend-dataflow-scripts",
 # "legend-daq2lh5 @  file:///${PROJECT_ROOT}/software/python/src/legend-daq2lh5
 # "pygama @ file:///${PROJECT_ROOT}/software/python/src/pygama",

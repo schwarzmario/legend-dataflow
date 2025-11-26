@@ -126,4 +126,5 @@ class ParsKeyResolve(ParsCatalog):
             )
             log.warning(msg)
             entrylist = []
+        print("get_par_catalog", keypart, search_patterns, name_dict, keylist, entrylist)
         return cls({"all": entrylist})
