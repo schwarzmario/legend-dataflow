@@ -63,6 +63,9 @@ dependencies = [
     "snakemake-logger-plugin-snkmt",
 ]
 
+#"pygama>=2.3.0",
+#"dspeed==2.0.2",
+#"legend-dataflow-scripts==0.2.4",
 #"legend-dataflow-scripts @  file:///${PROJECT_ROOT}/../legend-dataflow-scripts",
 # "legend-daq2lh5 @  file:///${PROJECT_ROOT}/software/python/src/legend-daq2lh5
 # "pygama @ file:///${PROJECT_ROOT}/software/python/src/pygama",

@@ -393,6 +393,7 @@ rule build_svm_dsp_geds:
         configs=config_path(config),
     shell:
         execenv_pyexe(config, "par-geds-dsp-svm-build") + "--log {log} "
+#        "--log-config {params.log_config} "
         "--train-data {input.train_data} "
         "--train-hyperpars {input.hyperpars} "
         "--output-file {output.dsp_pars} "
@@ -402,6 +403,13 @@ rule build_pars_dsp_svm_geds:
     input:
         dsp_pars=rules.build_pars_dsp_eopt_geds.output.dsp_pars,
         svm_file=rules.build_svm_dsp_geds.output.dsp_pars,
+#    params:
+#        log_config=lambda wildcards: get_log_config(
+#            dataflow_configs_texdb,
+#            wildcards.timestamp,
+#            "cal",
+#            "pars_svm_hyperpars",
+#        ),
     output:
         dsp_pars=temp(get_pattern_pars_tmp_channel(config, "dsp")),
     log:
@@ -412,6 +420,7 @@ rule build_pars_dsp_svm_geds:
         runtime=300,
     shell:
         execenv_pyexe(config, "par-geds-dsp-svm") + "--log {log} "
+#        "--log-config {params.log_config} "
         "--input-file {input.dsp_pars} "
         "--output-file {output.dsp_pars} "
         "--svm-file {input.svm_file}"
