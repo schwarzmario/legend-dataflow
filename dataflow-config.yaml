@@ -1,5 +1,6 @@
 #legend_metadata_version: v1.2.2
-allow_none_par: false
+# No need to run pargen for SiPM-only (p13) data:
+allow_none_par: true
 build_file_dbs: true
 check_log_files: true
 multiprocess: false
