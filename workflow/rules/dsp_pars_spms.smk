@@ -50,6 +50,8 @@ rule build_pars_dsp_tau_spms:
         patt.get_pattern_log(config, "pars_spms", time),
     group:
         "par-dsp"
+    resources:
+        disk_io=5
     shell:
         f'{execenv_pyexe(config, "par-spms-dsp-trg-thr-multi")} '
         "--config-path {params.configs} "

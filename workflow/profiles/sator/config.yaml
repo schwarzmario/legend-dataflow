@@ -1,4 +1,6 @@
 cores: 50
+resources:
+  - disk_io=100
 # restart-times: 2
 configfile: dataflow-config.yaml
 snakefile: ./workflow/Snakefile
