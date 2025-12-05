@@ -34,6 +34,7 @@ rule build_dsp:
     resources:
         runtime=300,
         mem_swap=lambda wildcards: 90 if wildcards.datatype == "cal" else 60,
+        disk_io=10
     params:
         timestamp="{timestamp}",
         datatype="{datatype}",

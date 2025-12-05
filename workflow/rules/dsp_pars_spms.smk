@@ -22,6 +22,8 @@ rule build_pars_dsp_tau_spms:
         datatype=r"\b(?!cal\b|xtc\b)\w+\b",
     group:
         "par-dsp"
+    resources:
+        disk_io=5,
     params:
         timestamp="{timestamp}",
         datatype="{datatype}",

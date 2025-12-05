@@ -25,6 +25,7 @@ rule build_tier_tcm:
     resources:
         runtime=300,
         mem_swap=20,
+        disk_io=10,
     params:
         timestamp="{timestamp}",
         datatype="{datatype}",

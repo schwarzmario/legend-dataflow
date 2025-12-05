@@ -41,6 +41,7 @@ rule build_hit:
         "tier-hit"
     resources:
         runtime=300,
+        disk_io=10,
     params:
         timestamp="{timestamp}",
         datatype="{datatype}",
