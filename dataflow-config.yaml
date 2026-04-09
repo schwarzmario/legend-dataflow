@@ -1,6 +1,6 @@
 #legend_metadata_version: v1.2.2
-allow_none_par: false
-build_file_dbs: true
+allow_none_par: true # true for p13
+build_file_dbs: true # turning that off seems to stop build_evt :(
 check_log_files: true
 multiprocess: false
 mutliprocess_mode: max_usage
@@ -22,9 +22,9 @@ paths:
   tier: $_/generated/tier
   tier_daq: $_/generated/tier/daq
   tier_raw: $_/../../data/tier/raw
-  tier_tcm: $_/generated/tier/tcm
+  tier_tcm: $_/generated/tier/tcm # $_/../../data/tier/tcm
   tier_dsp: $_/generated/tier/dsp
-  tier_hit: $_/generated/tier/hit
+  tier_hit: $_/generated/tier/hit # $_/../../data/tier/hit
   tier_ann: $_/generated/tier/ann
   tier_evt: $_/generated/tier/evt
   tier_psp: $_/generated/tier/psp
