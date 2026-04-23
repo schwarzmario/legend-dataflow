@@ -147,7 +147,10 @@ def get_table_name(metadata, config, datatype, timestamp, detector, tier):
                 ch=chmap[detector[1].channel].daq.rawid
             )
         return config.table_format[tier].format(ch=chmap[detector[0]].daq.rawid)
-    return config.table_format[tier].format(ch=chmap[detector].daq.rawid)
+    try:
+        return config.table_format[tier].format(ch=chmap[detector].daq.rawid)
+    except KeyError as e:
+        print(f"WARNING: detector {detector} not found in chmap")
 
 
 def get_all_channels(channelmap, timestamp, datatype):
